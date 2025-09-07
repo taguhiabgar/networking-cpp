@@ -1,26 +1,14 @@
 //
 //  main.cpp
-//  networking-spp
+//  networking-cpp
 //
 //  Created by Taguhi Abgar on 06.09.25.
 //
 
-#include <iostream>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
-#include <cstring>
+#include "SocketBasics.hpp"
 
 int main() {
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock == -1) {
-        std::cerr << "Failed to create socket\n";
-        return 1;
-    }
-
-    std::cout << "Socket created successfully (fd=" << sock << ")\n";
-
-    close(sock);
+    basicSocketCreation();
     return 0;
 }
 
